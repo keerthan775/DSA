@@ -14,14 +14,18 @@ def counting_sort(arr, n, pos):
     count_arr = [0] * 10
     for i in range(n):
         count_arr[(arr[i]//pos)%10] +=  1
-    for i in range(1,n):
+    for i in range(1,len(count_arr)):
         count_arr[i] = count_arr[i] + count_arr[i-1]
     output_arr = [0] * 10
     for i in range(n-1,-1,-1):
         output_arr[count_arr[(arr[i]//pos)%10 ]-1 ] = arr[i]
         count_arr[(arr[i]//pos)%10 ] -= 1
-    for i in range(len(arr)):
+    for i in range(n):
         arr[i] = output_arr[i]
     return arr
     
 print(radix_sort([432,8,530,90,88,231,11,45,677,199]))
+print(radix_sort([12, 11, 13, 5, 6, 10]))
+
+# Time complexity
+# O(d(n+k))
