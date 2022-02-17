@@ -12,7 +12,7 @@ def partition(arr, lb, ub):
     pivot = arr[lb]
     start = lb 
     end   = ub
-    while(start<end ):
+    while(start<end):
         while(arr[start]<=pivot and start != ub):
             start += 1 
         while(arr[end]>pivot and end != lb):
@@ -23,3 +23,19 @@ def partition(arr, lb, ub):
     return end
 
 print(quick_sort([7, 6, 10, 5, 9, 2, 1, 15, 7]))
+
+
+''' 
+three indicators :- start, end and pivot
+
+=> start indicator 
+* it is initialized to lower bound
+*  it will keep on incrementing by one till it found element which is greater than and equals to  pivot
+
+=> end indicator 
+* it is initialized to upper bound
+* it will keep on decrementing by one till it found element which lesser than pivot
+
+* when start and end stops at some index it will get swap for start lesser than end
+* at the end of partition end and lower bound element get swap
+'''
