@@ -22,7 +22,7 @@ def partition(arr, lb, ub):
     arr[lb], arr[end] = arr[end], arr[lb]
     return end
 
-print(quick_sort([7, 6, 10, 5, 9, 2, 1, 15, 7]))
+#print(quick_sort([7, 6, 10, 5, 9, 2, 1, 15, 7]))
 
 
 ''' 
