@@ -5,6 +5,7 @@ def fibo_normal(n):
     elif(n==1):
         return 1
     return fibo_normal(n-1) + fibo_normal(n-2)
+#O(2^n)
 
 #-----------Dynamic programming approach-----------
 #Top down approach or recursion
@@ -25,6 +26,7 @@ def fibo_tpa_main(n):
     memoization_list[0] = 0
     memoization_list[1] = 1
     return fibo_tpa(n,memoization_list)
+#O(n)
 
 #Bottom up approach or iterative
 def fibo_bua(n):
@@ -33,7 +35,7 @@ def fibo_bua(n):
     for i in range(2,n+1):
         arr[i] = arr[i-1] + arr[i-2]
     return arr[n]
-
+#O(n)
 if __name__ == "__main__":
     print(fibo_normal(6))
     print(fibo_tpa_main(6))
