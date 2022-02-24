@@ -36,6 +36,7 @@ def fibo_bua(n):
         arr[i] = arr[i-1] + arr[i-2]
     return arr[n]
 #O(n)
+
 if __name__ == "__main__":
     print(fibo_normal(6))
     print(fibo_tpa_main(6))
