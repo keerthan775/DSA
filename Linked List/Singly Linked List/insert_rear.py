@@ -1,6 +1,6 @@
 from linked_list import Node
 
-def insert_front(l):
+def insert_rear(l):
     if not l:
         print("No data")
         return []
@@ -11,8 +11,6 @@ def insert_front(l):
         temp = linked_list
         for i in l[1:]:
             node = Node(i)
-            node.next = temp
-            temp = node
-        linked_list = temp
+            temp.next = node
+            temp = temp.next
         return linked_list
-
