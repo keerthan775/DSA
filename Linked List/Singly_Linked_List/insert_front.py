@@ -1,4 +1,4 @@
-from linked_list import Node
+from .linked_list import Node
 
 def insert_front(l):
     if not l:
